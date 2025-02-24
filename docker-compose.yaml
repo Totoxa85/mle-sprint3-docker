@@ -1,0 +1,8 @@
+services:
+  churn-app:
+    env_file:
+      - ./.env
+    build:
+      dockerfile: Dockerfile
+    ports:
+      - "${APP_VM_PORT}:${APP_DOCKER_PORT}"
